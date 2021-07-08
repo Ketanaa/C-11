@@ -1,5 +1,5 @@
-var pathImg
-var Runner
+var pathImg,path;
+var Runner_running,Runner;
 
 
 
@@ -14,14 +14,14 @@ function preload(){
 function setup(){
   createCanvas(400,400);
   //create sprites here
-  path = createSprite(200,180);
+  path = createSprite(180,200);
   path.addImage(pathImg);
   path.y = path.length /2;
   path.velocity.y = 4;
 
   Runner = createSprite(200,300);
-  Runner.addAnimation(Runner_running);
-  Runner.scale = 0.5;
+  Runner.addAnimation("Runner running",Runner_running);
+  Runner.scale = 0.1;
 
   invisiblebarrier1=createSprite(400,200,10,400);
   invisiblebarrier1.visible=false;
